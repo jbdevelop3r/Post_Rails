@@ -1,0 +1,23 @@
+<h3 class="mb-4 mt-4 d-flex justify-content-center"> Sign up form </h3>
+
+<%= form_with model: @user, url: sign_up_path do |form| %>
+<div class= "d-flex justify-content-center align-items-center">
+<section style="width: 30rem;" class="container p-3 bg-dark text-light rounded-1">
+    <div class="mb-3">
+        <%= form.label :email, "Email address" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "john@gmail.com" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :password, "Password" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "Password"  %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :password_confirmation, "Password Confirmation" %>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Password"  %>
+    </div>
+    <div class="mb-3 d-flex justify-content-center">
+        <%= form.submit "Create User", class: "btn btn-success" %>
+    </div>
+</section>
+</div>
+<% end %>
